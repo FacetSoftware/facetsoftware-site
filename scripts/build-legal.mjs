@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-// Renders DeltaLab's privacy policy and support page into this site.
+// Renders DeltaLab's privacy policy, support page and terms of use into this site.
 //
 // The Markdown in the Lab repo (docs/privacy-policy/) is the source of truth;
-// the HTML under deltalab/privacy/ and deltalab/support/ is generated — edit
+// the HTML under deltalab/privacy/, deltalab/support/ and deltalab/terms/ is generated — edit
 // the Markdown, re-run this, and commit the output. Never edit the HTML.
 //
 //   node scripts/build-legal.mjs /path/to/Lab
 //
-// Dependency-free on purpose. It understands only the Markdown those two files
+// Dependency-free on purpose. It understands only the Markdown those files
 // use (front matter, #/##/### headings, paragraphs, flat "- " lists, bold,
 // italic, inline code, links) and THROWS on anything else, so a new construct
 // fails the build instead of shipping a mis-rendered legal page.
@@ -38,6 +38,14 @@ const PAGES = [
     url: 'https://facetsoftware.co.za/deltalab/support/',
     label: 'Support',
     description: 'Help, frequently asked questions and contact details for DeltaLab.',
+    other: { href: '/deltalab/privacy/', text: 'Privacy policy' },
+  },
+  {
+    src: 'docs/privacy-policy/terms/index.md',
+    out: 'deltalab/terms/index.html',
+    url: 'https://facetsoftware.co.za/deltalab/terms/',
+    label: 'Terms of use',
+    description: 'The terms for using DeltaLab, the NHLS lab-results app from Facet Software.',
     other: { href: '/deltalab/privacy/', text: 'Privacy policy' },
   },
 ];
