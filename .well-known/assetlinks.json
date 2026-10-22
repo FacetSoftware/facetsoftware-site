@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.labloupe.app",
+      "sha256_cert_fingerprints": [
+        "96:D8:6B:F7:90:B5:0D:A5:8B:7B:11:CB:5D:89:3A:1D:A3:16:17:78:F3:87:BA:CC:18:0C:90:78:F5:DF:20:5C"
+      ]
+    }
+  }
+]
