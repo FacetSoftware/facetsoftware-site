@@ -39,7 +39,7 @@
         <div class="mono">DeltaLab — Privacy policy</div>
         <h1>DeltaLab Privacy Policy</h1>
         <div class="doc-body">
-          <p><strong>Effective date: 7 July 2026</strong><br><strong>Last updated: 17 October 2026</strong></p>
+          <p><strong>Effective date: 7 July 2026</strong><br><strong>Last updated: 22 October 2026</strong></p>
           <p><em>This policy applies to DeltaLab on the Apple App Store (including TestFlight beta) and on Google Play. It may be revised as the app develops; the &quot;last updated&quot; date above always reflects the current version.</em></p>
           <h2 id="in-short">In short</h2>
           <p>DeltaLab is a convenience client for the National Health Laboratory Service (NHLS) TrakCare lab-results portal, built for South African doctors. You sign in with your <strong>own</strong> NHLS portal credentials, and the app fetches lab results directly from the NHLS portal to your device over HTTPS.</p>
@@ -98,6 +98,7 @@
             <li><strong>Google Play.</strong> DeltaLab is distributed on Android through Google Play. If you subscribe there, <strong>Google processes the payment</strong> and manages the auto-renewable subscription. The developer never receives your card or payment details. Google's handling of your data is governed by <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</li>
             <li><strong>RevenueCat.</strong> We use RevenueCat (the <code>react-native-purchases</code> SDK) to manage the subscription and verify entitlement. RevenueCat receives an <strong>anonymous app-user identifier</strong>, along with <strong>purchase/transaction history and receipt data</strong> relayed from Apple or Google. It does <strong>not</strong> receive your name, email, NHLS credentials, or any patient data. See <a href="https://www.revenuecat.com/privacy/" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
             <li><strong>Expo (EAS Update).</strong> App updates are delivered over-the-air via Expo's EAS Update service. To fetch the correct update, the app sends Expo basic device and runtime metadata (such as app version, runtime version, and platform) and a <strong>random identifier generated for this installation</strong>, which Expo uses to roll updates out gradually. It is not linked to your name, email, or NHLS account, and no patient data or credentials are involved. See <a href="https://expo.dev/privacy" rel="noopener">Expo's Privacy Explained</a>.</li>
+            <li><strong>Cloudflare (our website only).</strong> Counts visits to the DeltaLab invite page on our website, as described under &quot;Our website&quot; below. Nothing in the app uses it. See <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare's Privacy Policy</a>.</li>
             <li><strong>Google (connectivity checks).</strong> On both iPhone and Android, as described above, the app periodically makes an empty request to a Google connectivity-check address. Google receives only what any website receives when your phone connects to it, such as your IP address — nothing about you, your NHLS account, or any patient. See <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</li>
           </ul>
           <h2 id="the-free-tier-and-subscriptions">The free tier and subscriptions</h2>
@@ -109,6 +110,8 @@
             <li><strong>Android:</strong> <strong>Google Play Store → your profile icon → Payments &amp; subscriptions → Subscriptions</strong>, or <a href="https://play.google.com/store/account/subscriptions" rel="noopener">play.google.com/store/account/subscriptions</a>.</li>
           </ul>
           <p>Cancellation and refund handling follow the store's standard terms; the developer cannot cancel a subscription on your behalf or refund an Apple subscription.</p>
+          <h2 id="our-website">Our website</h2>
+          <p>When a colleague shares a DeltaLab referral link, it opens our invite page at <a href="https://facetsoftware.co.za/deltalab/invite/">facetsoftware.co.za/deltalab/invite</a>. That page counts visits with <strong>Cloudflare Web Analytics</strong>. It sets <strong>no cookies</strong>, stores nothing on your device, and does not track you across other sites. What is counted is the page, the time, the country the visit came from, and the kind of device and browser. Like any website, Cloudflare sees your IP address when the counter loads, and uses it to work out the country. The page removes the invite code from its address before anything is counted, so a visit cannot be linked to the colleague who shared the link. The rest of our website collects nothing.</p>
           <h2 id="how-patient-data-is-handled-and-who-is-responsible-popia">How patient data is handled, and who is responsible (POPIA)</h2>
           <p>This section matters and is written plainly.</p>
           <p>Patient lab results are <strong>special personal information</strong> under South Africa's Protection of Personal Information Act, 2013 (POPIA). In the context of DeltaLab:</p>

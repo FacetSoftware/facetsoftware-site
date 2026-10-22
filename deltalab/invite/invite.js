@@ -7,7 +7,7 @@
  *   first launch. The string must match buildPlayLink() in the DeltaLab repo
  *   (src/utils/referral/inviteLink.ts, pinned by inviteLink.test.ts): change both together.
  * - The page never contacts the referral server.
- * - The code is removed from the address bar before anything else could load, so a visit is never
+ * - The code is removed from the address bar before the visit counter loads, so a visit is never
  *   tied to the person who shared it.
  */
 (function () {
@@ -16,8 +16,10 @@
   var ALPHABET = 'ABCDEFGHJKMNPQRSTVWXYZ23456789';
   var PACKAGE = 'com.labloupe.app';
   var UTM = 'utm_source=deltalab&utm_medium=referral&utm_campaign=invite';
-  // Cloudflare Web Analytics site token. Empty: no analytics script is loaded (see README).
-  var ANALYTICS_TOKEN = '';
+  // Cloudflare Web Analytics site token (public; it ships in the page). Cookieless visit counts for
+  // this page only, the one exception to the site's no-third-party-requests rule (see README).
+  // Empty it to stop loading the script.
+  var ANALYTICS_TOKEN = '286f3405df3948eeb02346f0d0829051';
 
   function normaliseCode(input) {
     if (typeof input !== 'string' || input.length > 32) return null;
@@ -84,9 +86,10 @@
     }
   }
 
+  // Loaded only now, after the code has left the address bar, so no visit carries it.
   if (ANALYTICS_TOKEN) {
     var s = document.createElement('script');
-    s.defer = true;
+    s.type = 'module';
     s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
     s.setAttribute('data-cf-beacon', JSON.stringify({ token: ANALYTICS_TOKEN }));
     document.body.appendChild(s);
