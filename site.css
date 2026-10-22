@@ -108,6 +108,9 @@ footer .mono { letter-spacing: .04em; text-transform: none; }
 .appline strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.1; letter-spacing: -.01em; }
 .product-hero .lede { margin-top: 32px; }
 .status { display: inline-block; margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.get-app { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.store-button.soon { background: none; color: var(--muted); box-shadow: inset 0 0 0 1px var(--rule); cursor: default; }
+.store-button.soon:hover { background: none; color: var(--muted); }
 
 .device { margin: 0; justify-self: center; width: min(100%, 310px); }
 .device img { display: block; width: 100%; height: auto; border-radius: 38px; border: 7px solid var(--ink); background: #E8EBEA; }
