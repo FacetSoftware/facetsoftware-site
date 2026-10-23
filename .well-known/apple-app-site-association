@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Y88AP2THKM.com.labloupe.app"],
+        "components": [
+          {
+            "/": "/deltalab/invite*",
+            "comment": "DeltaLab referral invite links open the app when it is installed"
+          }
+        ]
+      }
+    ]
+  }
+}
