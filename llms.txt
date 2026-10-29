@@ -1,0 +1,22 @@
+# Facet Software
+
+> Facet Software (Pty) Ltd is a South African software company in Johannesburg building clinical tools for hospital doctors. Its product is DeltaLab, a native iPhone and Android app that shows doctors their patients' NHLS lab results on their phone, using their own NHLS TrakCare login.
+
+DeltaLab is independent: it is not affiliated with, endorsed by, or supported by the National Health Laboratory Service. It is a viewer for laboratory data, not a diagnostic device. It is free for five patients a day, with an optional subscription.
+
+## DeltaLab
+
+- [DeltaLab (plain text)](https://facetsoftware.co.za/deltalab/index.md): what the app does, privacy, pricing and FAQ
+- [DeltaLab product page](https://facetsoftware.co.za/deltalab/)
+- [App Store](https://apps.apple.com/za/app/deltalab/id6766098623)
+- [Google Play](https://play.google.com/store/apps/details?id=com.labloupe.app)
+
+## Policies and support
+
+- [Privacy policy](https://facetsoftware.co.za/deltalab/privacy/)
+- [Terms of use](https://facetsoftware.co.za/deltalab/terms/)
+- [Support](https://facetsoftware.co.za/deltalab/support/): contact hello@facetsoftware.co.za
+
+## Company
+
+- [Facet Software](https://facetsoftware.co.za/)
