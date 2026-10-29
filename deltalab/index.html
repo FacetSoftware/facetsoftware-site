@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DeltaLab — Facet Software</title>
-  <meta name="description" content="DeltaLab is a native app for clinicians to read NHLS lab results on their phone, using the portal login they already have. Made by Facet Software.">
+  <title>DeltaLab: NHLS lab results on your phone (iPhone and Android)</title>
+  <meta name="description" content="Stop chasing bloods. DeltaLab shows your patients' NHLS lab results on your phone, flagged and side by side, using the TrakCare login you already have. Free for five patients a day.">
   <link rel="canonical" href="https://facetsoftware.co.za/deltalab/">
   <meta property="og:title" content="DeltaLab — NHLS lab results, sorted">
   <meta property="og:description" content="Stop chasing bloods. Scan or search a patient and see their flagged NHLS lab results on your phone, using your own portal login.">
@@ -16,6 +16,9 @@
   <meta property="og:image:alt" content="DeltaLab for iPhone and Android — NHLS lab results, sorted. A results screen with high and low values flagged.">
   <meta property="og:site_name" content="Facet Software">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DeltaLab — NHLS lab results, sorted">
+  <meta name="twitter:description" content="Stop chasing bloods. Scan or search a patient and see their flagged NHLS lab results on your phone, using your own portal login.">
+  <meta name="twitter:image" content="https://facetsoftware.co.za/img/og-deltalab.png">
   <meta name="theme-color" content="#F7F6F1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#101512" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -23,6 +26,32 @@
   <link rel="preload" href="/fonts/newsreader-roman-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "DeltaLab",
+    "description": "A native app for clinicians to read NHLS lab results on their phone, using the TrakCare portal login they already have.",
+    "url": "https://facetsoftware.co.za/deltalab/",
+    "image": "https://facetsoftware.co.za/img/deltalab-icon.png",
+    "screenshot": "https://facetsoftware.co.za/img/deltalab-results.webp",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "MedicalApplication",
+    "countriesSupported": "ZA",
+    "inLanguage": "en",
+    "installUrl": [
+      "https://apps.apple.com/za/app/deltalab/id6766098623",
+      "https://play.google.com/store/apps/details?id=com.labloupe.app"
+    ],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ZAR" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Facet Software (Pty) Ltd",
+      "url": "https://facetsoftware.co.za/",
+      "email": "hello@facetsoftware.co.za"
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -49,7 +78,7 @@
           </div>
         </div>
         <figure class="device">
-          <img src="/img/deltalab-results.jpg" width="720" height="1564" alt="DeltaLab results screen: a full blood count and U&amp;E with high and low values flagged in red and blue beside their reference ranges.">
+          <img src="/img/deltalab-results.webp" fetchpriority="high" width="720" height="1565" alt="DeltaLab results screen: a full blood count and U&amp;E with high and low values flagged in red and blue beside their reference ranges.">
         </figure>
       </div>
 
@@ -61,7 +90,7 @@
             <li>Scan a specimen barcode instead of typing</li>
             <li>Read results with high and low flags and reference ranges, and see what is still pending</li>
             <li>Compare every result across all of a patient’s episodes in one timeline</li>
-            <li>Keep a ward-round list and see which of your patients have new results</li>
+            <li>Keep a ward-round list that flags new positive cultures and shows what is still pending</li>
             <li>See recent results for tests you requested, without searching</li>
             <li>Open and share the official lab report PDF</li>
             <li>Generate a ward-round handover sheet from a patient’s results</li>
@@ -78,16 +107,16 @@
           <p class="big">One-handed, in a hurry, on hospital wi-fi. Results start appearing as soon as the first ones arrive rather than after everything has loaded, and recently viewed patients reopen straight from your device.</p>
           <div class="shots">
             <figure class="device">
-              <img src="/img/deltalab-search.jpg" width="720" height="1564" loading="lazy" alt="DeltaLab search screen with fields for specimen, hospital number, name and episode, and one matching patient.">
+              <img src="/img/deltalab-search.webp" width="720" height="1565" loading="lazy" alt="DeltaLab search screen: patient lookup by specimen, hospital number, name or episode, with one matching patient and a barcode scan button.">
               <figcaption>Search by name, number or barcode.</figcaption>
             </figure>
             <figure class="device">
-              <img src="/img/deltalab-timeline.jpg" width="720" height="1564" loading="lazy" alt="DeltaLab timeline: a table of tests against collection dates, with abnormal values highlighted across episodes.">
+              <img src="/img/deltalab-timeline.webp" width="720" height="1565" loading="lazy" alt="DeltaLab timeline: one patient's tests across several collection dates, with high and low values shaded and trend arrows.">
               <figcaption>Every episode, side by side.</figcaption>
             </figure>
             <figure class="device">
-              <img src="/img/deltalab-round.jpg" width="720" height="1564" loading="lazy" alt="DeltaLab round list: four patients, two showing tests still pending.">
-              <figcaption>Your round list, with what’s still pending.</figcaption>
+              <img src="/img/deltalab-round.webp" width="720" height="1565" loading="lazy" alt="DeltaLab round list: three patients, one flagged with a new positive blood culture growing Staphylococcus aureus, the others showing tests still pending.">
+              <figcaption>Your round, with new cultures flagged.</figcaption>
             </figure>
           </div>
           <p class="fine">Screens show fictional demonstration data. No real patient appears on this page.</p>
