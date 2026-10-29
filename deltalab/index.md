@@ -1,6 +1,6 @@
 # DeltaLab: NHLS lab results on your phone
 
-> Stop chasing bloods. DeltaLab is a native iPhone and Android app for doctors in South Africa. Scan a specimen barcode or search by name, and it puts your patients' NHLS lab results on your phone: flagged against their reference ranges, side by side across episodes, and waiting on your round list. Sign in with the TrakCare login you already have.
+> Stop chasing bloods. DeltaLab is a native iPhone and Android app for doctors in South Africa. Scan a specimen barcode or search by name, and it puts your patients' NHLS lab results on your phone: flagged against their reference ranges, side by side across episodes, and waiting on your round list. Sign in with the NHLS LabTrack (TrakCare) login you already have.
 
 This is the plain-text version of <https://facetsoftware.co.za/deltalab/>.
 
@@ -59,9 +59,9 @@ Terms of use: <https://facetsoftware.co.za/deltalab/terms/>
 
 ## Questions doctors ask.
 
-### Do I need an NHLS account?
+### Do I need an NHLS LabTrack account?
 
-Yes. DeltaLab signs in with your own NHLS TrakCare portal login, and it needs an internet connection. There is no separate DeltaLab account to create, and the app shows only the records your NHLS access already permits.
+Yes. DeltaLab signs in with your own NHLS LabTrack (TrakCare) login, and it needs an internet connection. There is no separate DeltaLab account to create, and the app shows only the records your NHLS access already permits.
 
 ### Is DeltaLab part of the NHLS?
 
