@@ -1,4 +1,7 @@
+# Content Signals (https://contentsignals.org/): search engines and AI answers
+# may index and quote these pages; they may not be used to train AI models.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 Sitemap: https://facetsoftware.co.za/sitemap.xml
