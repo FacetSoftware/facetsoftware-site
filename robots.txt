@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://facetsoftware.co.za/sitemap.xml
