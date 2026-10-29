@@ -179,6 +179,16 @@ ul.assure svg { flex: none; width: 22px; height: 22px; padding: 3px; border-radi
   .chase-row:nth-child(3) > * { animation-delay: 1.3s; }
   @keyframes strike { from { background-size: 0 2px; } }
   @keyframes land { from { opacity: 0; transform: scale(.7); } }
+  /* Where the browser supports it, scrolling does the ticking instead: each job is struck as the
+     note rises up the screen, and scrolling back un-ticks it. Elsewhere the timed version runs. */
+  @supports (animation-timeline: view()) {
+    .chase { view-timeline: --chase block; }
+    .chase s, .chase .tick, .chase .chip { animation-timeline: --chase; animation-duration: auto; }
+    .chase s { animation-timing-function: linear; }
+    .chase-row:nth-child(1) > * { animation-delay: 0s; animation-range: contain 15% contain 30%; }
+    .chase-row:nth-child(2) > * { animation-delay: 0s; animation-range: contain 30% contain 45%; }
+    .chase-row:nth-child(3) > * { animation-delay: 0s; animation-range: contain 45% contain 60%; }
+  }
 }
 
 /* Outcome stories: one claim, one screen, alternating sides. */
