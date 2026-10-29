@@ -142,6 +142,87 @@ ul.features li { break-inside: avoid; padding: 15px 0; border-top: 1px solid var
   ul.features { columns: 1; }
 }
 
+/* ── DeltaLab landing page (/deltalab/) ───────────────────── */
+/* Hero: the pitch on the left; the results screen on the right with the ward to-do list it replaces. */
+.dl-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; padding: 76px 0 104px; }
+.dl-hero h1 { font-size: clamp(48px, 7vw, 92px); }
+.dl-hero .lede { margin-top: 28px; }
+ul.assure { list-style: none; margin: 30px 0 0; padding: 0; display: grid; gap: 10px; font-size: 16px; }
+ul.assure li { display: flex; align-items: center; gap: 12px; }
+ul.assure svg { flex: none; width: 22px; height: 22px; padding: 3px; border-radius: 50%; background: var(--accent); fill: none; stroke: var(--paper); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.dl-hero .get-app { margin-top: 36px; }
+.dl-hero-art { position: relative; justify-self: center; width: min(100%, 330px); padding-bottom: 24px; }
+.dl-hero-art .device { width: 100%; }
+
+/* The chase list: a paper note in both themes, so its colours are fixed rather than themed. */
+.chase {
+  position: absolute; left: -40%; bottom: 0; width: 330px;
+  padding: 14px 18px 14px 44px; border-radius: 10px;
+  background: #FBFAF4 repeating-linear-gradient(to bottom, transparent 0 51px, #E4E2D6 51px 52px) 0 13px / 100% 156px no-repeat;
+  box-shadow: 0 18px 40px -12px rgba(16, 24, 20, .45), 0 2px 6px rgba(16, 24, 20, .12);
+  color: #15201B; font-size: 15px; transform: rotate(-2.5deg);
+}
+.chase::before { content: ""; position: absolute; left: 32px; top: 0; bottom: 0; width: 1.5px; background: #E7A3A0; }
+.chase-row { display: flex; align-items: center; gap: 10px; height: 52px; }
+.chase .tick { flex: none; width: 20px; height: 20px; margin-left: -34px; border-radius: 5px; background: #1F6B52 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 15px no-repeat; }
+.chase s { flex: 1; color: #5C6660; text-decoration: none; background: linear-gradient(#1F6B52, #1F6B52) left 55% / 100% 2px no-repeat; white-space: nowrap; }
+.chase .chip { flex: none; padding: 4px 9px; border-radius: 999px; background: #fff; box-shadow: 0 1px 3px rgba(16, 24, 20, .18); font: 500 13px/1 var(--mono); white-space: nowrap; }
+.chase .chip b { display: inline-grid; place-items: center; width: 16px; height: 16px; margin: 0 2px; border: 1.5px solid; border-radius: 50%; font: 600 9px/1 var(--sans); }
+.chase .lo { color: #2563EB; }
+.chase .hi { color: #DC2626; }
+/* One moment: each job is struck through in turn and its result lands beside it. */
+@media (prefers-reduced-motion: no-preference) {
+  .chase s { animation: strike .5s cubic-bezier(.16, 1, .3, 1) both; }
+  .chase .tick, .chase .chip { animation: land .45s cubic-bezier(.16, 1, .3, 1) both; }
+  .chase-row:nth-child(1) > * { animation-delay: .5s; }
+  .chase-row:nth-child(2) > * { animation-delay: .9s; }
+  .chase-row:nth-child(3) > * { animation-delay: 1.3s; }
+  @keyframes strike { from { background-size: 0 2px; } }
+  @keyframes land { from { opacity: 0; transform: scale(.7); } }
+}
+
+/* Outcome stories: one claim, one screen, alternating sides. */
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; padding: 72px 0; border-top: 1px solid var(--rule); }
+.story:nth-of-type(even) .story-copy { order: 2; }
+.story-copy { max-width: 30em; }
+.story-copy p { margin: 0; font-size: 20px; line-height: 1.55; text-wrap: pretty; }
+.story .device { width: min(100%, 300px); }
+
+/* Heading | content sections. */
+.split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; padding: 64px 0 80px; border-top: 1px solid var(--rule); }
+.split h2 { font-size: clamp(34px, 4vw, 50px); }
+ul.also { list-style: none; margin: 8px 0 0; padding: 0; }
+ul.also li { padding: 13px 0; border-top: 1px solid var(--rule); font-size: 16.5px; line-height: 1.45; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 28px; margin-top: 40px; }
+.pair .device { width: 100%; }
+.pair .device img { border-radius: 28px; border-width: 5px; }
+.faq h3 { margin: 0 0 6px; font-family: var(--serif); font-weight: 500; font-size: 23px; line-height: 1.25; letter-spacing: -.01em; }
+.faq p { margin: 0 0 30px; max-width: 36em; text-wrap: pretty; }
+.faq p:last-child { margin-bottom: 0; }
+
+/* Closing call to action. */
+.dl-cta { padding: 88px 0 104px; border-top: 1px solid var(--rule); text-align: center; }
+.dl-cta img { display: block; margin: 0 auto 28px; border-radius: 14px; box-shadow: 0 0 0 1px var(--rule); }
+.dl-cta h2 { font-size: clamp(42px, 6vw, 76px); margin: 0; }
+.dl-cta h2 em { font-style: italic; color: var(--accent); }
+.dl-cta p { margin: 18px 0 0; font-size: 19px; color: var(--muted); }
+.dl-cta .get-app { justify-content: center; }
+
+@media (max-width: 760px) {
+  .dl-hero { grid-template-columns: 1fr; gap: 56px; padding: 48px 0 72px; }
+  .dl-hero-art { width: 100%; max-width: 420px; }
+  .dl-hero-art .device { width: min(72%, 280px); margin-left: auto; }
+  .chase { left: 0; width: min(86%, 300px); padding-left: 40px; font-size: 13.5px; background-size: 100% 132px; background-position: 0 12px; }
+  .chase-row { height: 44px; }
+  .chase .chip { font-size: 12px; padding: 3px 7px; }
+  .story, .split { grid-template-columns: 1fr; gap: 32px; padding: 52px 0; }
+  .story:nth-of-type(even) .story-copy { order: 0; }
+  .story .device { width: min(78%, 290px); justify-self: center; }
+  .story-copy p { font-size: 18px; }
+  .pair { gap: 16px; }
+  .dl-cta { padding: 64px 0 80px; }
+}
+
 /* ── Long-form documents (privacy policy, support) ────────── */
 .doc { padding: 84px 0 96px; max-width: 720px; }
 .doc h1 { font-size: clamp(40px, 5.6vw, 68px); margin-top: 22px; }

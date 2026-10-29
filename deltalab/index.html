@@ -52,6 +52,19 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need an NHLS account?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. DeltaLab signs in with your own NHLS TrakCare portal login. There is no separate DeltaLab account to create, and the app shows only the records your NHLS access already permits." } },
+      { "@type": "Question", "name": "Is DeltaLab part of the NHLS?", "acceptedAnswer": { "@type": "Answer", "text": "No. DeltaLab is an independent app made by Facet Software. It is not affiliated with, endorsed by, or supported by the National Health Laboratory Service." } },
+      { "@type": "Question", "name": "Where does patient data go?", "acceptedAnswer": { "@type": "Answer", "text": "Patient results travel between your phone and the NHLS and nowhere else. Results you have viewed are cached on your phone so you can reopen them, and you can clear that cache at any time from the Recent tab or from Settings." } },
+      { "@type": "Question", "name": "What does DeltaLab cost?", "acceptedAnswer": { "@type": "Answer", "text": "It is free for five patients a day, resetting at midnight. An optional monthly or annual subscription removes the limit, with a free trial for first-time subscribers, billed through the App Store or Google Play." } },
+      { "@type": "Question", "name": "Is DeltaLab a diagnostic device?", "acceptedAnswer": { "@type": "Answer", "text": "No. DeltaLab is a viewer for laboratory data. Clinical decisions remain yours." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -63,85 +76,116 @@
     </header>
 
     <main>
-      <div class="product-hero">
-        <div>
+      <div class="dl-hero">
+        <div class="dl-hero-copy">
           <div class="appline">
             <img src="/img/deltalab-icon.png" width="52" height="52" alt="">
             <div><strong>DeltaLab</strong><span class="mono">For iPhone and Android</span></div>
           </div>
-          <h1>NHLS lab results, <em>sorted.</em></h1>
-          <p class="lede">Stop chasing bloods. DeltaLab is a native app for reading NHLS lab results on your phone. Sign in with the TrakCare portal login you already have, find your patient, and see what came back.</p>
-          <span class="mono status">Free for five patients a day</span>
+          <h1>Stop chasing <em>bloods.</em></h1>
+          <p class="lede">DeltaLab puts your patients’ NHLS lab results on your phone: flagged against their reference ranges, side by side across episodes, and waiting on your round list. Sign in with the TrakCare login you already have.</p>
+          <ul class="assure">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free for five patients a day</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Your own NHLS login, no new account</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Results stay on your phone</li>
+          </ul>
           <div class="get-app">
             <a class="store-badge" href="https://apps.apple.com/za/app/deltalab/id6766098623"><img src="/img/badges/app-store-black-en.svg" width="144" height="48" alt="Download on the App Store"></a>
             <a class="store-badge store-badge-play" href="https://play.google.com/store/apps/details?id=com.labloupe.app"><img src="/img/badges/google-play-en.png" width="186" height="72" alt="Get it on Google Play"></a>
           </div>
         </div>
-        <figure class="device">
-          <img src="/img/deltalab-results.webp" fetchpriority="high" width="720" height="1565" alt="DeltaLab results screen: a full blood count and U&amp;E with high and low values flagged in red and blue beside their reference ranges.">
-        </figure>
+        <div class="dl-hero-art">
+          <figure class="device">
+            <img src="/img/deltalab-results.webp" fetchpriority="high" width="720" height="1565" alt="DeltaLab results screen: a full blood count and U&amp;E with high and low values flagged in red and blue beside their reference ranges.">
+          </figure>
+          <div class="chase" role="img" aria-label="A ward to-do list with three jobs ticked off: chase U&amp;E for bed 4, potassium low at 3.2; chase FBC for bed 7, haemoglobin low at 9.8; chase CRP for bed 12, high at 146.">
+            <div class="chase-row"><span class="tick"></span><s>Chase U&amp;E, bed 4</s><span class="chip">K <b class="lo">L</b> <span class="lo">3.2</span></span></div>
+            <div class="chase-row"><span class="tick"></span><s>Chase FBC, bed 7</s><span class="chip">Hb <b class="lo">L</b> <span class="lo">9.8</span></span></div>
+            <div class="chase-row"><span class="tick"></span><s>Chase CRP, bed 12</s><span class="chip">CRP <b class="hi">H</b> <span class="hi">146</span></span></div>
+          </div>
+        </div>
       </div>
 
-      <section class="row" aria-labelledby="does-h">
-        <div class="mono" id="does-h">01 — What it does</div>
-        <div>
-          <ul class="features">
+      <section class="story" aria-labelledby="round-h">
+        <div class="story-copy">
+          <h2 id="round-h">Know when a culture turns positive.</h2>
+          <p>Add patients to your round list and tap Update. DeltaLab flags a new positive culture with its organism, and shows which tests are still pending for everyone else.</p>
+        </div>
+        <figure class="device">
+          <img src="/img/deltalab-round.webp" width="720" height="1565" loading="lazy" alt="DeltaLab round list: three patients, one flagged with a new positive blood culture growing Staphylococcus aureus, the others showing tests still pending.">
+        </figure>
+      </section>
+
+      <section class="story" aria-labelledby="timeline-h">
+        <div class="story-copy">
+          <h2 id="timeline-h">See the change, not just the number.</h2>
+          <p>Every result across all of a patient’s episodes, in one table. High and low values are shaded, with arrows for the direction of change. Narrow it to one test set, or to abnormal values only.</p>
+        </div>
+        <figure class="device">
+          <img src="/img/deltalab-timeline.webp" width="720" height="1565" loading="lazy" alt="DeltaLab timeline: one patient’s tests across several collection dates, with high and low values shaded and trend arrows.">
+        </figure>
+      </section>
+
+      <section class="story" aria-labelledby="yours-h">
+        <div class="story-copy">
+          <h2 id="yours-h">Your requests, already waiting.</h2>
+          <p>The Yours tab lists recent results for tests you requested, over the last day, week or month, without a search. Add them all to your round at once.</p>
+        </div>
+        <figure class="device">
+          <img src="/img/deltalab-yours.webp" width="720" height="1565" loading="lazy" alt="DeltaLab Yours tab: five patients with recent results from the last seven days, each with their episode count, and an Add all to round button.">
+        </figure>
+      </section>
+
+      <section class="story" aria-labelledby="handover-h">
+        <div class="story-copy">
+          <h2 id="handover-h">A handover sheet, filled in for you.</h2>
+          <p>Generate a ward-round handover sheet from a patient’s results: bloods by date with their flags, and cultures with their organisms, as a PDF you can share. The official lab report PDF is a tap away too.</p>
+        </div>
+        <figure class="device">
+          <img src="/img/deltalab-handover.webp" width="720" height="1565" loading="lazy" alt="DeltaLab handover sheet PDF: a patient’s bloods across four dates with high and low values marked, and a positive blood culture listed under cultures.">
+        </figure>
+      </section>
+
+      <section class="split" aria-labelledby="ward-h">
+        <h2 id="ward-h">Built for the way a round actually runs.</h2>
+        <div class="prose">
+          <p class="big">One-handed, in a hurry, on hospital wi-fi. Results start appearing as soon as the first ones arrive rather than after everything has loaded.</p>
+          <ul class="also">
             <li>Find a patient by name, hospital number, specimen ID or episode number</li>
             <li>Scan a specimen barcode instead of typing</li>
-            <li>Read results with high and low flags and reference ranges, and see what is still pending</li>
-            <li>Compare every result across all of a patient’s episodes in one timeline</li>
-            <li>Keep a ward-round list that flags new positive cultures and shows what is still pending</li>
-            <li>See recent results for tests you requested, without searching</li>
-            <li>Open and share the official lab report PDF</li>
-            <li>Generate a ward-round handover sheet from a patient’s results</li>
             <li>Reopen recently viewed patients straight from your device</li>
             <li>Light and dark themes, for day rounds and night shifts</li>
           </ul>
-        </div>
-      </section>
-
-      <section class="row" aria-labelledby="ward-h">
-        <div class="mono">02 — On the ward</div>
-        <div class="prose">
-          <h2 id="ward-h">Built for the way a round actually runs.</h2>
-          <p class="big">One-handed, in a hurry, on hospital wi-fi. Results start appearing as soon as the first ones arrive rather than after everything has loaded, and recently viewed patients reopen straight from your device.</p>
-          <div class="shots">
+          <div class="pair">
             <figure class="device">
               <img src="/img/deltalab-search.webp" width="720" height="1565" loading="lazy" alt="DeltaLab search screen: patient lookup by specimen, hospital number, name or episode, with one matching patient and a barcode scan button.">
-              <figcaption>Search by name, number or barcode.</figcaption>
+              <figcaption>Find patients by name, number or barcode.</figcaption>
             </figure>
             <figure class="device">
-              <img src="/img/deltalab-timeline.webp" width="720" height="1565" loading="lazy" alt="DeltaLab timeline: one patient's tests across several collection dates, with high and low values shaded and trend arrows.">
-              <figcaption>Every episode, side by side.</figcaption>
-            </figure>
-            <figure class="device">
-              <img src="/img/deltalab-round.webp" width="720" height="1565" loading="lazy" alt="DeltaLab round list: three patients, one flagged with a new positive blood culture growing Staphylococcus aureus, the others showing tests still pending.">
-              <figcaption>Your round, with new cultures flagged.</figcaption>
+              <img src="/img/deltalab-results-dark.webp" width="720" height="1565" loading="lazy" alt="DeltaLab results screen in the dark theme, with high and low values flagged.">
+              <figcaption>Easy on the eyes at 3 a.m.</figcaption>
             </figure>
           </div>
           <p class="fine">Screens show fictional demonstration data. No real patient appears on this page.</p>
         </div>
       </section>
 
-      <section class="row" aria-labelledby="privacy-h">
-        <div class="mono">03 — Privacy</div>
+      <section class="split" aria-labelledby="privacy-h">
+        <h2 id="privacy-h">Your data stays on your phone.</h2>
         <div class="prose">
-          <h2 id="privacy-h">Your data stays on your phone.</h2>
-          <p class="big">Patient results travel between your device and the NHLS and nowhere else — we never see them, and we could not retrieve them if we wanted to.</p>
-          <p>Your NHLS credentials are held in your phone's secure storage and sent only to the NHLS. There are no analytics, no tracking, no advertising and no crash-reporting SDKs in the app.</p>
+          <p class="big">Patient results travel between your device and the NHLS and nowhere else. We never see them, and we could not retrieve them if we wanted to.</p>
+          <p>Your NHLS credentials are held in your phone’s secure storage and sent only to the NHLS. There are no analytics, no tracking, no advertising and no crash-reporting SDKs in the app.</p>
           <p>Results you have viewed are cached on your device so you can reopen them, and you can clear that cache at any time from the Recent tab or from Settings. Because it holds patient information, protect your phone with a passcode or biometrics, as you would any device you use to view patient records.</p>
           <div class="textlinks">
             <a class="arrow" href="/deltalab/privacy/">Privacy policy</a>
-            <a class="arrow" href="/deltalab/terms/">Terms of use</a>
           </div>
         </div>
       </section>
 
-      <section class="row" aria-labelledby="price-h">
-        <div class="mono">04 — Pricing</div>
+      <section class="split" aria-labelledby="price-h">
+        <h2 id="price-h">Free for five patients a day.</h2>
         <div class="prose">
-          <h2 id="price-h">Free for five patients a day.</h2>
-          <p class="big">DeltaLab is free to use for five patients per day, resetting at midnight. Reopening a patient you have already opened that day does not count again, and patients saved on your device stay readable once the allowance is spent.</p>
+          <p class="big">The allowance resets at midnight. Reopening a patient you have already opened that day does not count again, and patients saved on your device stay readable once the allowance is spent.</p>
           <p>An optional subscription removes the daily limit. Monthly and annual plans are available, both with a free trial for first-time subscribers. Subscriptions are billed through Google Play or the App Store, and can be managed or cancelled there at any time.</p>
           <div class="textlinks">
             <a class="arrow" href="/deltalab/terms/">Terms of use</a>
@@ -149,19 +193,29 @@
         </div>
       </section>
 
-      <section class="row" aria-labelledby="important-h">
-        <div class="mono" id="important-h">05 — Important</div>
-        <div class="prose">
-          <p>DeltaLab is an independent app. It is not affiliated with, endorsed by, or supported by the National Health Laboratory Service. It requires your own valid NHLS portal account and an internet connection, and it shows only the records that account is already entitled to see.</p>
-          <p>It is a viewer for laboratory data and is not a diagnostic device — clinical decisions remain yours.</p>
+      <section class="split" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions doctors ask.</h2>
+        <div class="faq">
+          <h3>Do I need an NHLS account?</h3>
+          <p>Yes. DeltaLab signs in with your own NHLS TrakCare portal login, and it needs an internet connection. There is no separate DeltaLab account to create, and the app shows only the records your NHLS access already permits.</p>
+          <h3>Is DeltaLab part of the NHLS?</h3>
+          <p>No. DeltaLab is an independent app made by Facet Software. It is not affiliated with, endorsed by, or supported by the National Health Laboratory Service.</p>
+          <h3>Where does patient data go?</h3>
+          <p>Between your phone and the NHLS, and nowhere else. Results you have viewed are cached on your phone so you can reopen them, and you can clear that cache at any time.</p>
+          <h3>Is it a diagnostic device?</h3>
+          <p>No. DeltaLab is a viewer for laboratory data. Clinical decisions remain yours.</p>
+          <h3>Something not working?</h3>
+          <p>Email <a href="mailto:hello@facetsoftware.co.za">hello@facetsoftware.co.za</a> or see the <a href="/deltalab/support/">support page</a>.</p>
         </div>
       </section>
 
-      <section class="row contact" aria-labelledby="support-h">
-        <div class="mono" id="support-h">06 — Support</div>
-        <div>
-          <a class="email" href="mailto:hello@facetsoftware.co.za">hello@facetsoftware.co.za</a>
-          <p>Questions or problems. <a href="/deltalab/support/">Support page</a></p>
+      <section class="dl-cta" aria-labelledby="cta-h">
+        <img src="/img/deltalab-icon.png" width="64" height="64" alt="">
+        <h2 id="cta-h">Your next round, <em>sorted.</em></h2>
+        <p>Free for five patients a day, on iPhone and Android.</p>
+        <div class="get-app">
+          <a class="store-badge" href="https://apps.apple.com/za/app/deltalab/id6766098623"><img src="/img/badges/app-store-black-en.svg" width="144" height="48" alt="Download on the App Store"></a>
+          <a class="store-badge store-badge-play" href="https://play.google.com/store/apps/details?id=com.labloupe.app"><img src="/img/badges/google-play-en.png" width="186" height="72" alt="Get it on Google Play"></a>
         </div>
       </section>
     </main>
@@ -169,7 +223,6 @@
     <footer>
       <span class="mono">© 2026 Facet Software (Pty) Ltd · Reg. no. 2026/750377/07</span>
       <span class="mono">Johannesburg, South Africa</span>
-      <span class="mono trademarks">Apple, the Apple logo and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Google Play and the Google Play logo are trademarks of Google LLC.</span>
     </footer>
   </div>
 </body>
