@@ -109,8 +109,6 @@ footer .mono { letter-spacing: .04em; text-transform: none; }
 .product-hero .lede { margin-top: 32px; }
 .status { display: inline-block; margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--rule); }
 .get-app { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.store-button.soon { background: none; color: var(--muted); box-shadow: inset 0 0 0 1px var(--rule); cursor: default; }
-.store-button.soon:hover { background: none; color: var(--muted); }
 
 .device { margin: 0; justify-self: center; width: min(100%, 310px); }
 .device img { display: block; width: 100%; height: auto; border-radius: 38px; border: 7px solid var(--ink); background: #E8EBEA; }
@@ -171,6 +169,7 @@ ul.features li { break-inside: avoid; padding: 15px 0; border-top: 1px solid var
 .copy:hover { border-color: var(--accent); color: var(--accent); }
 .copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .invite-actions { margin-top: 40px; }
+.invite-actions .get-app { margin-top: 0; }
 .invite-actions p { margin: 18px 0 0; color: var(--muted); font-size: 16px; max-width: 34em; }
 .store-button { display: inline-block; padding: 14px 26px; border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 500; text-decoration: none; }
 .store-button:hover { background: var(--accent); color: var(--paper); }
@@ -178,5 +177,5 @@ ul.features li { break-inside: avoid; padding: 15px 0; border-top: 1px solid var
 .only-ios, .only-desktop { display: none; }
 [data-os="ios"] .only-ios, [data-os="desktop"] .only-desktop { display: block; }
 [data-os="ios"] .only-android, [data-os="desktop"] .only-android { display: none; }
-[data-os="ios"] .store-button { display: none; }
+[data-os="ios"] #play, [data-os="android"] #appstore { display: none; }
 @media (max-width: 760px) { .invite { padding: 48px 0 64px; } }
