@@ -14,7 +14,7 @@ colors:
   ward-mint: "#7FD1B0"
   note-paper: "#FBFAF4"
   note-margin: "#E7A3A0"
-  app-surface: "#E8EBEA"
+  app-surface: "#E8ECEC"
   app-teal: "#336F6C"
   flag-high: "#DC2626"
   flag-low: "#2563EB"
@@ -135,7 +135,7 @@ A two-colour world of paper and ink with one green, inverted for night; the clin
 
 ### Object colours (fixed in both themes)
 - **Note Paper** (`note-paper`) with **Margin Red** (`note-margin`): the ruled to-do note. It's a physical object, so it stays light at night.
-- **App Surface** (`app-surface`), **App Teal** (`app-teal`), **Flag High** (`flag-high`), **Flag Low** (`flag-low`): used only in drawings of DeltaLab's own screens, matching the app.
+- **App Surface** (`app-surface`), **App Teal** (`app-teal`), **Flag High** (`flag-high`), **Flag Low** (`flag-low`): used only in drawings of DeltaLab's own screens. They are the app's light-theme values from `src/theme.ts` in the DeltaLab repo (`bg`, `primary`, `flagH`, `flagL`), and the drawings' greys use its text and surface tokens too. When the app's theme changes, change these. The app's own design system is `docs/DESIGN.md` there, mirrored on claude.ai as the DeltaLab Design System.
 
 ### Named Rules
 **The One Green Rule.** Ward Green is the page's only accent. It marks links, one word per headline, ticks and focus. Never use it for large fills or backgrounds.

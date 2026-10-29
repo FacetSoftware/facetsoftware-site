@@ -187,7 +187,7 @@
       "app-surface": {
         "role": "object",
         "displayName": "App Surface",
-        "canonical": "#E8EBEA",
+        "canonical": "#E8ECEC",
         "tonalRamp": [
           "#252827",
           "#3D4341",
