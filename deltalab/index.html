@@ -83,7 +83,7 @@
             <div><strong>DeltaLab</strong><span class="mono">For iPhone and Android</span></div>
           </div>
           <h1>Stop chasing <em>bloods.</em></h1>
-          <p class="lede">DeltaLab puts your patients’ NHLS lab results on your phone: flagged against their reference ranges, side by side across episodes, and waiting on your round list. Sign in with the TrakCare login you already have.</p>
+          <p class="lede">Scan a specimen barcode or search by name, and DeltaLab puts your patients’ NHLS lab results on your phone: flagged against their reference ranges, side by side across episodes, and waiting on your round list. Sign in with the TrakCare login you already have.</p>
           <ul class="assure">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free for five patients a day</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Your own NHLS login, no new account</li>
@@ -105,6 +105,39 @@
           </div>
         </div>
       </div>
+
+      <section class="scan-flow" aria-labelledby="scan-h">
+        <div class="scan-head">
+          <h2 id="scan-h">Skip the <em>typing.</em></h2>
+          <p>Point your phone at the barcode on a specimen tube. DeltaLab looks up that specimen, you tap the patient, and their results open with high and low values flagged.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-word">Scan.</span>
+            <div class="step-card cam" role="img" aria-label="The barcode scanner: a specimen tube label framed by the camera, with its code ABCD1234XYZ read.">
+              <div class="tube"><div class="tube-label"><svg viewBox="0 0 191 40" preserveAspectRatio="none" aria-hidden="true"><rect x="0" width="3" height="40"/><rect x="6" width="3" height="40"/><rect x="10" width="1" height="40"/><rect x="14" width="1" height="40"/><rect x="16" width="3" height="40"/><rect x="21" width="1" height="40"/><rect x="23" width="1" height="40"/><rect x="27" width="3" height="40"/><rect x="31" width="1" height="40"/><rect x="33" width="1" height="40"/><rect x="35" width="1" height="40"/><rect x="37" width="1" height="40"/><rect x="41" width="2" height="40"/><rect x="46" width="1" height="40"/><rect x="48" width="2" height="40"/><rect x="53" width="1" height="40"/><rect x="55" width="3" height="40"/><rect x="60" width="3" height="40"/><rect x="64" width="2" height="40"/><rect x="68" width="1" height="40"/><rect x="71" width="1" height="40"/><rect x="73" width="1" height="40"/><rect x="77" width="1" height="40"/><rect x="80" width="3" height="40"/><rect x="84" width="1" height="40"/><rect x="86" width="1" height="40"/><rect x="88" width="1" height="40"/><rect x="92" width="3" height="40"/><rect x="98" width="3" height="40"/><rect x="102" width="1" height="40"/><rect x="105" width="2" height="40"/><rect x="108" width="2" height="40"/><rect x="112" width="1" height="40"/><rect x="116" width="1" height="40"/><rect x="118" width="1" height="40"/><rect x="120" width="1" height="40"/><rect x="122" width="3" height="40"/><rect x="128" width="1" height="40"/><rect x="130" width="3" height="40"/><rect x="134" width="1" height="40"/><rect x="138" width="3" height="40"/><rect x="142" width="3" height="40"/><rect x="148" width="1" height="40"/><rect x="150" width="2" height="40"/><rect x="154" width="1" height="40"/><rect x="156" width="1" height="40"/><rect x="160" width="1" height="40"/><rect x="162" width="1" height="40"/><rect x="164" width="3" height="40"/><rect x="169" width="1" height="40"/><rect x="172" width="2" height="40"/><rect x="177" width="1" height="40"/><rect x="179" width="1" height="40"/><rect x="181" width="1" height="40"/><rect x="183" width="2" height="40"/><rect x="187" width="3" height="40"/></svg><span>ABCD1234XYZ</span></div></div>
+              <div class="viewfinder"><b></b><b></b><b></b><b></b><i></i></div>
+              <span class="read">ABCD1234XYZ</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-word">Tap.</span>
+            <div class="step-card app" role="img" aria-label="The matching patient, Naledi Mokoena, being tapped in the search results.">
+              <div class="pt tapped"><strong>NALEDI <span>MOKOENA</span></strong><div class="pt-tags"><span class="hn"><small>Hosp No</small> 4400121</span><span>35 · F</span></div><div class="pt-sub">14/03/1991</div><span class="ripple" aria-hidden="true"></span></div>
+              <div class="pt dim"><strong>SIPHO <span>NKOSI</span></strong><div class="pt-tags"><span class="hn"><small>Hosp No</small> 4400503</span><span>46 · M</span></div></div>
+            </div>
+          </li>
+          <li>
+            <span class="step-word">Sorted.</span>
+            <div class="step-card app" role="img" aria-label="Naledi Mokoena’s results: potassium low at 3.2, haemoglobin low at 9.8, platelet count high at 412.">
+              <div class="who">Patient <b>NALEDI MOKOENA</b></div>
+              <div class="res"><span>Potassium</span><b class="flag lo">L</b><span class="val lo">3.2</span></div>
+              <div class="res"><span>Haemoglobin</span><b class="flag lo">L</b><span class="val lo">9.8</span></div>
+              <div class="res"><span>Platelet count</span><b class="flag hi">H</b><span class="val hi">412</span></div>
+            </div>
+          </li>
+        </ol>
+      </section>
 
       <section class="story" aria-labelledby="round-h">
         <div class="story-copy">
@@ -152,7 +185,6 @@
           <p class="big">One-handed, in a hurry, on hospital wi-fi. Results start appearing as soon as the first ones arrive rather than after everything has loaded.</p>
           <ul class="also">
             <li>Find a patient by name, hospital number, specimen ID or episode number</li>
-            <li>Scan a specimen barcode instead of typing</li>
             <li>Reopen recently viewed patients straight from your device</li>
             <li>Light and dark themes, for day rounds and night shifts</li>
           </ul>
