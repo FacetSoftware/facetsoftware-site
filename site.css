@@ -246,7 +246,7 @@ ul.also li { padding: 13px 0; border-top: 1px solid var(--rule); font-size: 16.5
 
 /* Closing call to action. */
 .dl-cta { padding: 88px 0 104px; border-top: 1px solid var(--rule); text-align: center; }
-.dl-cta img { display: block; margin: 0 auto 28px; border-radius: 14px; box-shadow: 0 0 0 1px var(--rule); }
+.dl-cta > img { display: block; margin: 0 auto 28px; border-radius: 14px; box-shadow: 0 0 0 1px var(--rule); }
 .dl-cta h2 { font-size: clamp(42px, 6vw, 76px); margin: 0; }
 .dl-cta h2 em { font-style: italic; color: var(--accent); }
 .dl-cta p { margin: 18px 0 0; font-size: 19px; color: var(--muted); }
