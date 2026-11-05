@@ -82,3 +82,5 @@ Email <hello@facetsoftware.co.za> or see the support page: <https://facetsoftwar
 ---
 
 DeltaLab is made by Facet Software (Pty) Ltd, Johannesburg, South Africa (reg. no. 2026/750377/07).
+
+Terms of use: <https://facetsoftware.co.za/deltalab/terms/>
